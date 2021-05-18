@@ -36,27 +36,25 @@ enum cell_types process_move(struct game *game, unsigned int move)
 void fill_set(unsigned* set, unsigned size, unsigned range)
 {
 	set[0] = rand() % range;
-  
-  for(unsigned i = 1; i < size; i++)
-	{
-    range--;
-    set[i] = rand() % range;
-    
-    unsigned toAdd, temp;
-    unsigned addCount = 0;
+	for(unsigned i = 1; i < size; i++) {
+		range--;
+		set[i] = rand() % range;
 		
-    do {
+		unsigned toAdd, temp;
+		unsigned addCount = 0;
+		
+		do {
 			toAdd = addCount;
 			temp = set[i] + toAdd;
-      addCount = 0;
+			addCount = 0;
 
-      for(unsigned j = 0; j < i; j++) {
-        if(set[j] <= temp)
-          addCount++;
-      }
-    } while (toAdd != addCount);
-      
-    set[i] += addCount;
-  }
+			for(unsigned j = 0; j < i; j++) {
+				if(set[j] <= temp)
+				addCount++;
+			}
+		} while (toAdd != addCount);
+		
+		set[i] += addCount;
+	}
 }
 
