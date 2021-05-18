@@ -1,14 +1,14 @@
 # Battleship 
 Implemetation of simple udp server and udp client for battleship game in C
 # Compiling 
-Server and Client:
+- Server and Client:
   make
-Game Visualization Test
+- Game Visualization Test:
   make compile.game.test
 # Running 
-Server
+- Server:
   ./udp_server
-Client
+- Client:
   ./udp_client 
-Game test
+- Game test:
   ./game.test
