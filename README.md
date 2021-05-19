@@ -3,12 +3,12 @@ Implemetation of simple udp server and udp client for battleship game in C. Visu
 # Compiling 
 - Server and Client:
   make
-- Game Visualization Test:
+- Game Visuals Test:
   make compile.game.test
 # Running 
 - Server:
   ./udp_server
 - Client:
   ./udp_client 
-- Game test:
+- Game Visuals test:
   ./game.test
